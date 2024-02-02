@@ -1,5 +1,6 @@
 package com.himanshudhiman1997.weatherforecast
 
+import android.animation.ObjectAnimator
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
@@ -136,6 +137,25 @@ class MainActivity : AppCompatActivity() {
         } else {
             activityMainBinding.progressBar.visibility = View.GONE
             activityMainBinding.dataHolderView.visibility = View.VISIBLE
+
+            addAnimationToForecastCardView(activityMainBinding)
         }
+    }
+
+    private fun addAnimationToForecastCardView(activityMainBinding: ActivityMainBinding) {
+        // Set the initial translationY to move it off-screen
+        activityMainBinding.cvForecastData.translationY = 1000f
+
+        // Create an ObjectAnimator for translationY
+        val translateYAnimator = ObjectAnimator.ofFloat(
+            activityMainBinding.cvForecastData,
+            "translationY",
+            0f
+        )
+
+        // Set the animation duration
+        translateYAnimator.duration = 1000
+
+        translateYAnimator.start()
     }
 }
