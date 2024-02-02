@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="largeTextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/largeTextSize</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="fontFamily">@font/roboto_black</item>
+    </style>
+
+    <style name="mediumTextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/mediumTextSize</item>
+        <item name="android:textColor">@color/lightPurple</item>
+        <item name="fontFamily">@font/roboto_thin</item>
+    </style>
+
+    <style name="smallTextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/smallTextSize</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+    </style>
+</resources>

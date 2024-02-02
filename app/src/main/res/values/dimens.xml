@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="largeTextSize">96sp</dimen>
+    <dimen name="mediumTextSize">36sp</dimen>
+    <dimen name="smallTextSize">16sp</dimen>
+    <dimen name="cardElevation">5dp</dimen>
+    <dimen name="zeroDp">0dp</dimen>
+    <dimen name="progressBarSize">96dp</dimen>
+    <dimen name="marginVertical">16dp</dimen>
+</resources>

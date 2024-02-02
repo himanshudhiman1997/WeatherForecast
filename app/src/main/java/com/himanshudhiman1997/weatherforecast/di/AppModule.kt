@@ -1,5 +1,7 @@
-package com.himanshudhiman1997.weatherforecast
+package com.himanshudhiman1997.weatherforecast.di
 
+import com.himanshudhiman1997.weatherforecast.WeatherApiService
+import com.himanshudhiman1997.weatherforecast.WeatherRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

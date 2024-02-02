@@ -1,9 +1,13 @@
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
 }
+
+val weatherAPIKey: String = gradleLocalProperties(rootDir).getProperty("WEATHER_API_KEY")
 
 android {
     namespace = "com.himanshudhiman1997.weatherforecast"
@@ -20,17 +24,25 @@ android {
     }
 
     buildTypes {
+
+        debug {
+            buildConfigField("String", "weatherAPIKey", weatherAPIKey)
+        }
+
         release {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+
+            buildConfigField("String", "weatherAPIKey", weatherAPIKey)
         }
     }
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 
     compileOptions {
@@ -62,11 +74,10 @@ dependencies {
 
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
 
     //dagger hilt
     implementation("com.google.dagger:hilt-android:2.48")
     kapt("com.google.dagger:hilt-android-compiler:2.48")
 
-    implementation ("androidx.activity:activity-ktx:1.8.2")
+    implementation("androidx.activity:activity-ktx:1.8.2")
 }
