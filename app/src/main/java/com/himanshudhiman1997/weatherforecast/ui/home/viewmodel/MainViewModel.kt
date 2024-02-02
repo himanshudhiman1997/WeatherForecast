@@ -1,7 +1,8 @@
-package com.himanshudhiman1997.weatherforecast
+package com.himanshudhiman1997.weatherforecast.ui.home.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.himanshudhiman1997.weatherforecast.ui.home.repository.WeatherRepository
 import com.himanshudhiman1997.weatherforecast.model.ForecastResponse
 import com.himanshudhiman1997.weatherforecast.model.WeatherResponse
 import com.himanshudhiman1997.weatherforecast.utils.ApiResult

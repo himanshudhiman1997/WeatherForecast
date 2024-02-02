@@ -8,6 +8,7 @@ plugins {
 }
 
 val weatherAPIKey: String = gradleLocalProperties(rootDir).getProperty("WEATHER_API_KEY")
+val weatherApiBaseUrl: String = gradleLocalProperties(rootDir).getProperty("WEATHER_API_BASE_URL")
 
 android {
     namespace = "com.himanshudhiman1997.weatherforecast"
@@ -27,6 +28,7 @@ android {
 
         debug {
             buildConfigField("String", "weatherAPIKey", weatherAPIKey)
+            buildConfigField("String", "weatherApiBaseUrl", weatherApiBaseUrl)
         }
 
         release {
@@ -37,6 +39,7 @@ android {
             )
 
             buildConfigField("String", "weatherAPIKey", weatherAPIKey)
+            buildConfigField("String", "weatherApiBaseUrl", weatherApiBaseUrl)
         }
     }
 

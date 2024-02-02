@@ -1,7 +1,8 @@
 package com.himanshudhiman1997.weatherforecast.di
 
-import com.himanshudhiman1997.weatherforecast.WeatherApiService
-import com.himanshudhiman1997.weatherforecast.WeatherRepository
+import com.himanshudhiman1997.weatherforecast.BuildConfig
+import com.himanshudhiman1997.weatherforecast.api.WeatherApiService
+import com.himanshudhiman1997.weatherforecast.ui.home.repository.WeatherRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,7 +19,7 @@ object AppModule {
     @Singleton
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://api.openweathermap.org/data/2.5/")
+            .baseUrl(BuildConfig.weatherApiBaseUrl)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

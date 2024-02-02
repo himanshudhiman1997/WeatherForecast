@@ -1,10 +1,11 @@
-package com.himanshudhiman1997.weatherforecast
+package com.himanshudhiman1997.weatherforecast.ui.home.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.himanshudhiman1997.weatherforecast.R
 
 class WeatherAdapter(private val data: List<Map.Entry<String, Double>>) :
     RecyclerView.Adapter<WeatherAdapter.ViewHolder>() {

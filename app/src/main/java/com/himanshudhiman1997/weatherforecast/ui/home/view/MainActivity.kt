@@ -1,4 +1,4 @@
-package com.himanshudhiman1997.weatherforecast
+package com.himanshudhiman1997.weatherforecast.ui.home.view
 
 import android.animation.ObjectAnimator
 import android.os.Bundle
@@ -8,6 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.himanshudhiman1997.weatherforecast.ui.home.viewmodel.MainViewModel
+import com.himanshudhiman1997.weatherforecast.R
+import com.himanshudhiman1997.weatherforecast.ui.home.adapter.WeatherAdapter
 import com.himanshudhiman1997.weatherforecast.databinding.ActivityMainBinding
 import com.himanshudhiman1997.weatherforecast.model.ForecastItem
 import com.himanshudhiman1997.weatherforecast.model.ForecastResponse

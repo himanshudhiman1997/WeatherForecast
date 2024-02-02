@@ -1,4 +1,4 @@
-package com.himanshudhiman1997.weatherforecast
+package com.himanshudhiman1997.weatherforecast.api
 
 import com.himanshudhiman1997.weatherforecast.model.ForecastResponse
 import com.himanshudhiman1997.weatherforecast.model.WeatherResponse

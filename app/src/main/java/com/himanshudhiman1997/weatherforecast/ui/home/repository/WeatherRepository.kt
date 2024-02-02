@@ -1,6 +1,8 @@
-package com.himanshudhiman1997.weatherforecast
+package com.himanshudhiman1997.weatherforecast.ui.home.repository
 
 import android.util.Log
+import com.himanshudhiman1997.weatherforecast.BuildConfig
+import com.himanshudhiman1997.weatherforecast.api.WeatherApiService
 import com.himanshudhiman1997.weatherforecast.model.ForecastResponse
 import com.himanshudhiman1997.weatherforecast.model.WeatherResponse
 import com.himanshudhiman1997.weatherforecast.utils.ApiResult
